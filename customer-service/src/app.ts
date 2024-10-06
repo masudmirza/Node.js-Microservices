@@ -22,7 +22,6 @@ app.use('/api/v1', appRoutes.router);
 const grpcServer = Container.get(GrpcServer);
 grpcServer.start();
 
-
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

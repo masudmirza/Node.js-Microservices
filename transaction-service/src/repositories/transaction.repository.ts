@@ -20,14 +20,8 @@ export default class TransactionRepository implements ITransactionRepository {
         return await Transaction.findByIdAndUpdate(id, updateData, { new: true }).exec();
     }
 
-    async getLast(id: string, type: TransactionType): Promise<ITransaction> {
-        console.log(id)
-        console.log(type);
-        ;
+    async getLast(id: string, type: TransactionType): Promise<ITransaction | null> {
+        return await Transaction.findOne({ sourceCustomerId: id, type }).sort({ createdAt: -1 });
         
-        const transaction = await Transaction.find({ sourceCustomerId: id, type }).sort({ createdAt: -1 }).limit(1);
-        console.log(transaction);
-        
-        return transaction[0];
     }
 }
