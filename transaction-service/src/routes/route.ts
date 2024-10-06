@@ -1,17 +1,17 @@
 import { Router } from 'express';
 import { Service } from 'typedi';
-import CustomerRoute from './customer.route';
+import TransactionRouter from './transaction.route';
 
 @Service()
 export default class AppRoutes {
     public router: Router;
 
-    constructor(private customerRoute: CustomerRoute) {
+    constructor(private transactionRouter: TransactionRouter) {        
         this.router = Router();
         this.initializeRoutes();
     }
 
     private initializeRoutes() {
-        this.router.use('/customers', this.customerRoute.router);
+        this.router.use('/transactions', this.transactionRouter.router);
     }
 }

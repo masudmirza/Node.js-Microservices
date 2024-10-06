@@ -4,5 +4,6 @@ import { CustomResponse } from '../../utils/custom-response';
 export default interface ICustomerService {
     createCustomer(data: Partial<ICustomer>): Promise<CustomResponse<ICustomer>>;
     getCustomer(id: string): Promise<CustomResponse<ICustomer>>;
-    updateCustomerBalance(id: string, amount: number): Promise<CustomResponse<ICustomer>>;
+    increaseCustomerBalance(id: string, amount: number): Promise<CustomResponse<ICustomer>>;
+    decreaseCustomerBalance(id: string, amount: number): Promise<CustomResponse<ICustomer>>;
 }

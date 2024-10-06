@@ -14,6 +14,5 @@ export default class CustomerRoute {
     private initializeRoutes() {
         this.router.post('/', this.customerController.createCustomer.bind(this.customerController));
         this.router.get('/:id', this.customerController.getCustomer.bind(this.customerController));
-        this.router.put('/:id/balance', this.customerController.updateCustomerBalance.bind(this.customerController));
     }
 }

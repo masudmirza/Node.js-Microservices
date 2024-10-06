@@ -14,8 +14,4 @@ const CustomerSchema = new Schema<ICustomer>(
     }
 );
 
-CustomerSchema.methods.updateBalance = function (amount: number) {
-    this.balance += amount;
-};
-
 export const Customer = model<ICustomer>('Customer', CustomerSchema);

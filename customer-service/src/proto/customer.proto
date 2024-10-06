@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package customer;
+
+service CustomerService {
+    rpc GetCustomerInfo (CustomerRequest) returns (CustomerResponse);
+    rpc IncreaseCustomerBalance (UpdateBalanceRequest) returns (UpdateBalanceResponse);
+    rpc DecreaseCustomerBalance (UpdateBalanceRequest) returns (UpdateBalanceResponse);
+}
+
+message CustomerRequest {
+    string id = 1;
+}
+
+message CustomerResponse {
+    string id = 1;
+    string name = 2;
+    string surname = 3;
+    string gsmNumber = 4;
+    double balance = 5;
+}
+
+message UpdateBalanceRequest {
+    string id = 1;
+    double amount = 2;
+}
+
+message UpdateBalanceResponse {
+    string id = 1;
+    double balance = 2;
+}

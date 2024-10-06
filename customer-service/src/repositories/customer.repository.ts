@@ -5,8 +5,8 @@ import ICustomer from '../models/interfaces/customer.interface';
 
 @Service()
 export default class CustomerRepository implements ICustomerRepository {
-    async create(customerData: Partial<ICustomer>): Promise<ICustomer> {
-        const customer = new Customer(customerData);
+    async create(body: Partial<ICustomer>): Promise<ICustomer> {
+        const customer = new Customer(body);
         return customer.save();
     }
 
@@ -14,11 +14,19 @@ export default class CustomerRepository implements ICustomerRepository {
         return Customer.findById(id);
     }
 
-    async updateBalance(id: string, balance: number): Promise<ICustomer | null> {
-        const customer = await Customer.findById(id);
-        
-        if (!customer) return null;
-        customer.updateBalance(balance);
-        return customer.save();
+    async increaseBalance(id: string, amount: number): Promise<ICustomer | null> {
+        return await Customer.findByIdAndUpdate(
+            id,
+            { $inc: { balance: amount } },
+            { new: true }
+        ).exec();
+    }
+
+    async decreaseBalance(id: string, amount: number): Promise<ICustomer | null> {
+        return await Customer.findByIdAndUpdate(
+            id,
+            { $inc: { balance: -amount } },
+            { new: true }
+        ).exec();
     }
 }
