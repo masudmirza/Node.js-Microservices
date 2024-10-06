@@ -11,7 +11,7 @@ export default class CustomerController {
             const response = await this.customerService.createCustomer(req.body);
             res.status(response.statusCode).json(response);
         } catch (error: any) {
-            next(error);
+            res.status(error.statusCode).json(error);
         }
     }
 
