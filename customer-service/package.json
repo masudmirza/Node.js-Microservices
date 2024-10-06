@@ -12,6 +12,7 @@
     "dev": "yarn prepare && concurrently \"yarn watch\" \"yarn start\""
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "mongoose": "^8.7.0",
     "reflect-metadata": "^0.2.2",
