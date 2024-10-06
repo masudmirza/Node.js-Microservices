@@ -1,6 +1,6 @@
 # Banking Application
 
-This is a small banking application consisting of two microservices: **Customer Service** and **Transaction Service**. Both services are located in the same repository for testing purposes, although it is a best practice to use separate repositories for microservices.
+This is a small banking application consisting of two microservices: **Customer Service**, **Transaction Service** and **Proxy Service**. Both services are located in the same repository for testing purposes, although it is a best practice to use separate repositories for microservices.
 
 ## Table of Contents
 
@@ -8,6 +8,7 @@ This is a small banking application consisting of two microservices: **Customer 
 - [Services Overview](#services-overview)
   - [Customer Service](#customer-service)
   - [Transaction Service](#transaction-service)
+  - [Proxy Service](#proxy-service)
 - [Features](#features)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
@@ -39,6 +40,10 @@ The Transaction Service handles financial transactions, including:
 - Purchase transactions
 - Refund transactions
 - Transfer of customer balances
+
+### Proxy Service
+
+The Proxy Service acts as an intermediary between clients and the microservices in the banking application. It simplifies API interactions by routing requests to the appropriate services (Customer Service and Transaction Service) and handles CORS issues.
 
 The Transaction Service communicates with the Customer Service to retrieve and update customer data.
 
