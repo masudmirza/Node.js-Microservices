@@ -41,11 +41,11 @@ The Transaction Service handles financial transactions, including:
 - Refund transactions
 - Transfer of customer balances
 
+The Transaction Service communicates with the Customer Service to retrieve and update customer data.
+
 ### Proxy Service
 
 The Proxy Service acts as an intermediary between clients and the microservices in the banking application. It simplifies API interactions by routing requests to the appropriate services (Customer Service and Transaction Service) and handles CORS issues.
-
-The Transaction Service communicates with the Customer Service to retrieve and update customer data.
 
 ## Features
 
