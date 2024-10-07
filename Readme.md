@@ -83,7 +83,6 @@ To set up the project locally, follow these steps:
 After starting the services, you can interact with the APIs using tools like Postman or curl. Here are some example endpoints:
 - **Create Customer**: `POST /customers`
 - **Get Customer**: `GET /customers/:id`
-- **Update Balance**: `PATCH /customers/:id/balance`
 - **Top-Up Balance**: `POST /transactions/top-up`
 - **Purchase**: `POST /transactions/purchase`
 - **Refund**: `POST /transactions/refund`
