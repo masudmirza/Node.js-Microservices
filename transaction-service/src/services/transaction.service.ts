@@ -69,7 +69,7 @@ export default class TransactionService implements ITransactionService {
         try {
             const transaction = await this.transactionRepository.getLast(sourceCustomerId, TransactionType.PURCHASE);
 
-            if (!transaction || transaction.amount !== amount) {
+            if (!transaction) {
                 throw new CustomError(404, ErrorCode.PURCHASE_NOT_FOUND);
             }
             if (transaction.amount < amount) {
