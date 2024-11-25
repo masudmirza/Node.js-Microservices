@@ -1,6 +1,6 @@
 # Banking Application
 
-This is a small banking application consisting of two microservices: **Customer Service**, **Transaction Service** and **Proxy Service**. Both services are located in the same repository for testing purposes, although it is a best practice to use separate repositories for microservices.
+This is a small banking application consisting of three microservices: **Customer Service**, **Transaction Service** and **Proxy Service**. Both services are located in the same repository for testing purposes, although it is a best practice to use separate repositories for microservices.
 
 ## Table of Contents
 
