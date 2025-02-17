@@ -14,7 +14,7 @@ app.use('/customer-proxy', createProxyMiddleware({
 app.use('/transaction-proxy', createProxyMiddleware({
     target: process.env.TRANSACTION_SERVICE_URL,
     changeOrigin: true,
-    pathRewrite: { '^/transactions': '' },
+    pathRewrite: { '^/transaction-proxy': '' },
 }));
 
 const PORT = process.env.PORT || 3000;
