@@ -1,0 +1,45 @@
+{
+  "folders": [
+    {
+      "name": "✨ Banking-app",
+      "path": "..",
+    },
+    {
+      "name": "👤 customer-ms",
+      "path": "../customer-ms",
+    },
+    {
+      "name": "💸 transaction-ms",
+      "path": "../transaction-ms",
+    },
+  ],
+  "settings": {
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features",
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+    "editor.formatOnSave": true,
+    "dotenv.enableAutocloaking": false,
+    "eslint.validate": ["typescript"],
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto",
+      },
+    ],
+    "prettier.requireConfig": true,
+  },
+  "extensions": {
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "firsttris.vscode-jest-runner",
+      "streetsidesoftware.code-spell-checker",
+      "usernamehw.errorlens",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "yoavbls.pretty-ts-errors",
+    ],
+  },
+}
