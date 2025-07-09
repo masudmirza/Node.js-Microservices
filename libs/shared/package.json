@@ -1,0 +1,26 @@
+{
+  "name": "@masudmirzazada/shared",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "publish": "rm -rf dist && tsc && pnpm publish --access restricted --no-git-checks"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "mongoose": "^8.16.1",
+    "prettier": "^3.6.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
