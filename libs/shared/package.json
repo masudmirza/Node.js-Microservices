@@ -1,6 +1,6 @@
 {
   "name": "@masudmirza/shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
@@ -8,6 +8,7 @@
     "access": "public"
   },
   "scripts": {
+    "release": "standard-version",
     "publish": "rm -rf dist && tsc && pnpm publish --access public --no-git-checks"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "prettier": "^3.6.2"
   },
   "devDependencies": {
+    "standard-version": "^9.5.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
