@@ -10,7 +10,7 @@
   "scripts": {
     "release": "standard-version",
     "build": "rm -rf dist && tsc",
-    "publish": "pnpm build && pnpm publish --access public --no-git-checks"
+    "pub": "pnpm build && pnpm publish --access public --no-git-checks"
   },
   "keywords": [],
   "author": "",
