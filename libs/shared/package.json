@@ -5,10 +5,10 @@
   "types": "dist/index.d.ts",
   "private": false,
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
-    "publish": "rm -rf dist && tsc && pnpm publish --access restricted --no-git-checks"
+    "publish": "rm -rf dist && tsc && pnpm publish --access public --no-git-checks"
   },
   "keywords": [],
   "author": "",
