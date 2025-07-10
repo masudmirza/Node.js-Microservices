@@ -1,8 +1,13 @@
-// utils
-export * from "./utils/custom-response";
-export * from "./utils/custom-error";
-export * from "./utils/bad-request-error";
-export * from "./utils/not-found-error";
+// errors-response
+export * from "./errors-response/custom-response";
+export * from "./errors-response/custom-error";
+export * from "./errors-response/bad-request-error";
+export * from "./errors-response/not-found-error";
 
-// helpers
-export * from "./helpers/db";
+// oubtox
+export * from "./outbox/outbox.service";
+export * from "./outbox/outbox.processor";
+
+// utils
+export * from "./utils/db";
+export * from "./utils/event-bus";
