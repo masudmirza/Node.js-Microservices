@@ -12,7 +12,9 @@ export class OutboxProcessor {
     private readonly eventBus: EventBus,
     private readonly redisUrl: string,
   ) {
-    this.redisConnection = new IORedis(this.redisUrl);
+    this.redisConnection = new IORedis(this.redisUrl, {
+      maxRetriesPerRequest: null,
+    });
     this.queue = new Queue("outbox-queue", { connection: this.redisConnection });
     this.queueEvents = new QueueEvents("outbox-queue", {
       connection: this.redisConnection,
