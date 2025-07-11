@@ -11,3 +11,6 @@ export * from "./outbox/outbox.processor";
 // utils
 export * from "./utils/db";
 export * from "./utils/event-bus";
+
+// decorators
+export * from "./decorators/object-id";

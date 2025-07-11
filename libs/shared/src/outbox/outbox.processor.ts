@@ -38,6 +38,7 @@ export class OutboxProcessor {
       "flush-outbox",
       {},
       {
+        jobId: "repeat-flush-outbox",
         repeat: { every: 1000 },
         attempts: 3,
         backoff: {

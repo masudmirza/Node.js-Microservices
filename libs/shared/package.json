@@ -18,6 +18,7 @@
   "packageManager": "pnpm@10.12.4",
   "dependencies": {
     "bullmq": "^5.56.3",
+    "class-validator": "^0.14.2",
     "ioredis": "^5.6.1",
     "kafkajs": "^2.2.4",
     "mongoose": "^8.16.1",
