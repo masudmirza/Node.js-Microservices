@@ -54,6 +54,9 @@ export class OutboxProcessor {
       "outbox-queue",
       async (job: Job) => {
         const unsent = await Outbox.find({ sent: false }).limit(100);
+
+        if (unsent.length === 0) return;
+
         for (const entry of unsent) {
           try {
             await this.eventBus.publish(entry.topic, entry.payload, entry.key);
